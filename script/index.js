@@ -70,6 +70,8 @@ const handleShowDetails = async (id) => {
     handleModal(phone)
 } 
 const handleModal = (phone) =>{
+    const image = document.getElementById('image')
+    image.src = phone.image
     const phoneName = document.getElementById('phone-name')
     phoneName.innerText = phone.name
     const storage = document.getElementById('storage')
