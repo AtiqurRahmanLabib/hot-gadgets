@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Phone Hunter</title>
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+<body>
+    <header>
+        <div class="flex justify-center mt-5">
+            <div class="flex gap-[150px] w-[95%] justify-between ">
+                <p class="font-bold text-[25px] text-[#403F3F] ">Hot Gadgets</p>
+                <button class="w-[140px] h-[50px] rounded-[8px] bg-[#0D6EFD] text-[#FFFFFF]">sing up</button>
+            </div>
+        </div>
+        <div class="text-center mt-1 pt-1">
+            <h1 class="text-[#100F0F] font-bold text-[65px]">Apple Iphone 13 Pro Max</h1>
+            <p class="text-[#706F6F] text-[18px] mt-7">There are many variations of passages of Lorem Ipsum available,
+                but
+                the majority <br> have suffered alteration in some form, by injected humou.</p>
+            <button class="w-[140px] h-[50px] rounded-[8px] bg-[#0D6EFD] text-[#FFFFFF] mt-7">Buy Now</button>
+        </div>
+        <div class="flex justify-center mt-7">
+            <img class=" w-[841px] h-[585px]" src="./Images/Group 48095420.png" alt="" srcset="">
+        </div>
+    </header>
+    <main>
+        <h1 class="text-center font-semibold text-[35px] text-[#100F0F mt-5">Search your phone</h1>
+        <div class="flex justify-center mt-4">
+            <input placeholder="Search your phone" class="border w-[533px] h-[54px]  rounded-lg " type="text"
+                id="input-feild">
+            <button onclick="handleSearch()"
+                class="border w-[150px] h-[54px] rounded-lg bg-[#0D6EFD] text-white font-bold">Search</button>
+        </div>
+        <div id="loading-spinner" class="text-center mt-9 hidden">
+            <div class="spinner mx-auto mt-6"></div>
+        </div>
+        <section class="mt-10 flex justify-center" id="products-main-container">
+            <div class="grid grid-cols-3 gap-8" id="phone-container">
+            </div>
+            </div>
+            </div>
+        </section>
+        <div class=" flex justify-center mt-24">
+            <div>
+                <button onclick="showAll()" id="showMore"
+                    class="bg-[#0D6EFD] text-white font-bold h-[50px] w-[140px] rounded-lg hidden">Show All</button>
+            </div>
+        </div>
+        <div class="modal-overlay" id="modal">
+            <div class="modal-container">
+                <button class="close-btn text-white font-bold" onclick="closeModal()">Close</button>
+                <h2 id="phone-name" class="text-[#403F3F] font-bold text-[30px] text-start "></h2>
+                <p class="text-[#706F6F] text-[16px]
+            text-start">It is a long established fact that a reader will be distracted by the readable content of a
+                    page when looking at its layout.</p>
+                <div class="text-start">
+                    <h1 class="text-[#403F3F] font-semibold text-[20px]">Storage:      <span class="text-[#706F6F] text-[19px]" id="storage"></span></h1>
+                    <h1 class="text-[#403F3F] font-semibold text-[20px]">Display Size: <span class="text-[#706F6F] text-[19px]" id="display-size"></span></h1>
+                    <h1 class="text-[#403F3F] font-semibold text-[20px]">Chipset:      <span class="text-[#706F6F] text-[19px]" id="chipset"></span></h1>
+                    <h1 class="text-[#403F3F] font-semibold text-[20px]">Memory:       <span class="text-[#706F6F] text-[19px]" id="memory"></span></h1>
+                    <h1 class="text-[#403F3F] font-semibold text-[20px]">Slug:         <span class="text-[#706F6F] text-[19px]" id="slug"></span></h1>
+                    <h1 class="text-[#403F3F] font-semibold text-[20px]">Release Date: <span class="text-[#706F6F] text-[19px]" id="release-date"></span></h1>
+                    <h1 class="text-[#403F3F] font-semibold text-[20px]">Brand:        <span class="text-[#706F6F] text-[19px]" id="brand"></span></h1>
+                    <h1 class="text-[#403F3F] font-semibold text-[20px]">GPS:          <span class="text-[#706F6F] text-[19px]" id="gps"></span></h1>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="mt-14">
+        <div class="w-full h-auto  bg-[#0D6EFD0A]">
+            <div class="flex justify-between w-[1300px] m-auto">
+                <div class="">
+                    <h1 class="text-[#100F0F] font-bold text-[45px]">Hot Gadgets</h1>
+                    <p class="text-[#706F6F] font-semibold">You can definitetly work</p>
+                </div>
+                <div class="flex items-center  w-[400px] ">
+                    <img class=" mt-1 w-[150px]" src="./Images/Social.svg" alt="">
+                    <button class="ml-[90px] w-[140px] h-[50px] rounded-[8px] bg-[#0D6EFD] text-[#FFFFFF] mt-1">join
+                        premium</button>
+                </div>
+            </div>
+            <hr class="bg-[#CFCFCF] w-[1300px] ml-[100px] mt-3">
+            <div class="w-[1300px] m-auto mt-9 ">
+                <div class="flex gap-[250px]">
+                    <div class="text-[#403F3F] font-medium text-[20px]">
+                        <p>Product</p>
+                        <p>Browse jobs</p>
+                        <p>Remote jobs</p>
+                        <p>Startup jobs</p>
+                    </div>
+                    <div class="text-[#403F3F] font-medium text-[20px]">
+                        <p>Popular</p>
+                        <p>UIUX Design</p>
+                        <p>Product Design</p>
+                        <p>Back-End-Developer</p>
+                        <p>Front-End-Developer</p>
+                    </div>
+                    <div class="text-[#403F3F] font-medium text-[20px]">
+                        <p>Resource</p>
+                        <p>Faq</p>
+                        <p>Support</p>
+                        <p>Privacy Policy</p>
+                        <p>Terms of Service</p>
+                    </div>
+                    <div class="text-[#403F3F] font-medium text-[20px]">
+                        <p>Company</p>
+                        <p>About Us</p>
+                        <p>Contact Us</p>
+                        <p>Career Tips</p>
+                        <p>Career</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
